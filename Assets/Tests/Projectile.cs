@@ -10,7 +10,6 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D rb;
     public int damage = 20;
 
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -20,10 +19,7 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         PlayerController playerController = hitInfo.GetComponent<PlayerController>();
-        //if (playerController != null)
-        //{
         playerController.TakeDamage(damage);
-        //}
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }

@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public int bandage = 3;
     public int healingb = 20;
 
+    public Respawn respawn;
+
     /*public bool isTalking;*/
 
     void Start()
@@ -31,7 +33,11 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
         if (health <= 0)
         {
-            Die();
+/*            respawn.OnTriggerStay2D();
+*/            //Die();
+            health = 100;
+            bandage = 2;
+            currentHealth = 100;
         }
         healthBar.SetHealth(currentHealth);
     }
@@ -39,7 +45,9 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+
+
     }
 
     // Update is called once per frame
@@ -50,10 +58,10 @@ public class PlayerController : MonoBehaviour
             return;
         }*/
 
-        if (DialogueManagerr.isActive == true)
+        /*if (DialogueManagerr.isActive == true)
         {
 
-        }
+        }*/
             
 
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -83,4 +91,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    /*void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player") == true)
+        {
+
+        }
+    }*/
 }
