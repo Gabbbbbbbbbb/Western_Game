@@ -21,7 +21,7 @@ public class AIBehaviourOne : MonoBehaviour
 
     private void Update()
     {
-
+        //Enemy will try to get as close as possible to the target.
         if (detector.TargetVisible)
         {
             distance = Vector2.Distance(transform.position, player.transform.position);

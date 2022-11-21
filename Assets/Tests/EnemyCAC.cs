@@ -12,8 +12,7 @@ public class EnemyCAC : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        /*PlayerController playerController = GetComponent<PlayerController>();
-        playerController.TakeDamage(damage);*/
+        //Damages done by a CAC enemy.
         if (collider.gameObject.CompareTag("Player") == true)
         {
             Character.TakeDamage(damage);
