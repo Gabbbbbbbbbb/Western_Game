@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
         if (health <= 0)
         {
-/*            respawn.OnTriggerStay2D();
-*/            //Die();
+            /*            respawn.OnTriggerStay2D();
+            */            //Die();
             health = 100;
             bandage = 2;
             currentHealth = 100;

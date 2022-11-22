@@ -9,6 +9,7 @@ public class Respawn : MonoBehaviour
     public Transform RespawnPoint;
 
     public bool checkingin = false;
+    public bool NoHealth = false;
 
     /*public void MarcheStp()
     {
@@ -21,10 +22,28 @@ public class Respawn : MonoBehaviour
         if (collider.gameObject.CompareTag("Player") == true)
         {
             checkingin = true;
-            if (Player.health <= 0)
+            /*if (checkingin == true)
             {
-                PlayerCharacter.position = RespawnPoint.position;
-            }
+                Death();
+            }*/
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D colliderr)
+    {
+        if (colliderr.gameObject.CompareTag("Player") == true)
+        {
+            checkingin = false;
+        }
+    }
+
+    public void Death()
+    {
+        if (checkingin = true && Player.health <= 0)
+        {
+            NoHealth = true;
+            PlayerCharacter.position = RespawnPoint.position;
+            Player.health = 100;
         }
     }
 }
