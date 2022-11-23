@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class NPCDestroy : MonoBehaviour
 {
-    public DialogueTrigger trigger;
+    public DialogueTrigHenryOne trigger;
     public float Interactions = 5;
     public GameObject Npc;
 
-    public DialogueManagerr Counting;
+    public DialogueManageHenryOne Counting;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -20,7 +20,7 @@ public class NPCDestroy : MonoBehaviour
 
     public void Update()
     {
-        if (Counting.NumberClick >= Interactions)
+        if (Counting.NumberClickk >= Interactions)
         {
             Destroy(Npc);
         }
