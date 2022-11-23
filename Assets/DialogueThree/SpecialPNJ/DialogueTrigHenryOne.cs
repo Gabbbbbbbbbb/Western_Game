@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DialogueTrigHenryOne : MonoBehaviour
 {
-    public Messagee[] messages;
-    public Actorr[] actors;
+    public Messagee[] messagess;
+    public Actorr[] actorss;
 
     public void StartDialogue()
     {
-        FindObjectOfType<DialogueManageHenryOne>().OpenDialogue(messages, actors);
+        FindObjectOfType<DialogueManageHenryOne>().OpenDialogue(messagess, actorss);
     }
 }
 
