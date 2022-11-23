@@ -31,23 +31,25 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         currentHealth -= damage;
-        if (health <= 0)
+        /*if (health <= 0)
         {
-            /*            respawn.OnTriggerStay2D();
-            */            //Die();
-            //health = 100;
+            //respawn.OnTriggerStay2D();
+            //Die();
+            health = 100;
             bandage = 2;
             currentHealth = 100;
-        }
+        }*/
         healthBar.SetHealth(currentHealth);
     }
 
-    void Die()
+    public void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         //Destroy(gameObject);
-
-
+        health = 100;
+        bandage = 2;
+        currentHealth = 100;
+        healthBar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -91,12 +93,4 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    /*void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Player") == true)
-        {
-
-        }
-    }*/
 }

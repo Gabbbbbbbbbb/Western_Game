@@ -37,13 +37,18 @@ public class Respawn : MonoBehaviour
         }
     }
 
-    public void Death()
+    void Update()
     {
+        if (Player.health <= 0)
+        {
+            NoHealth = true;
+        }
+
         if (checkingin = true && Player.health <= 0)
         {
             NoHealth = true;
-            PlayerCharacter.position = RespawnPoint.position;
-            Player.health = 100;
+            PlayerCharacter.position = new Vector2 (RespawnPoint.position.x, RespawnPoint.position.y);
+            Player.Die();
         }
     }
 }
