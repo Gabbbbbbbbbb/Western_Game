@@ -10,8 +10,13 @@ public class NPCTrainA : MonoBehaviour
 
     public ManageTrainA Counting;
 
-    public GameObject NpcPrefab;
-    public Transform Switching;
+    //public Transform Switching;
+
+    public GameObject NpcPrefab; //Remplacer pnj par un autre pnj normal
+    public GameObject Carriage; //Spawn de l'intéraction sur R4.
+
+    public GameObject bandits; //Bandits à supprimer sur R4.
+
 
     private bool canDestroy = true;
 
@@ -29,8 +34,12 @@ public class NPCTrainA : MonoBehaviour
         if (Counting.NumberClickk >= Interactions && canDestroy == true)
         {
             //Faire spawn plus de prefab
-            Instantiate(NpcPrefab, Switching.position, Switching.rotation);
+            //Instantiate(NpcPrefab, Switching.position, Switching.rotation);
+            NpcPrefab.SetActive(true);
+            Carriage.SetActive(true);
             Destroy(Npc);
+            Destroy(bandits);
+
             canDestroy = false;
         }
     }
