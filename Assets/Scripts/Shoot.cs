@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour
     public bool init = false;
 
     public GameObject temoin;
+    public GameObject writing;
 
     // Update is called once per frame
     void Update()
@@ -14,6 +15,13 @@ public class Shoot : MonoBehaviour
         if(init == true)
         {
             temoin.SetActive(true);
+            writing.SetActive(true);
+        }
+
+        if(init == false)
+        {
+            temoin.SetActive(false);
+            writing.SetActive(false);
         }
     }
 
