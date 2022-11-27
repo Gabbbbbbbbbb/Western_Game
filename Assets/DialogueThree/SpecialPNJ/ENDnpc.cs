@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ENDnpc : MonoBehaviour
 {
@@ -24,8 +25,7 @@ public class ENDnpc : MonoBehaviour
     {
         if (Counting.NumberClickk >= Interactions && canDestroy == true)
         {
-            
-            canDestroy = false;
+            SceneManager.LoadScene("END");
         }
     }
 }
