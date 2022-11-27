@@ -57,14 +57,14 @@ public class PlayerController : MonoBehaviour
     {
         /*if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            return;
+            Time.timeScale = 0;
         }*/
 
         /*if (DialogueManagerr.isActive == true)
         {
-
+            Time.timeScale = 0;
         }*/
-            
+
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
