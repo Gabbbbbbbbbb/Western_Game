@@ -13,7 +13,7 @@ public class ZSwitchSwann : MonoBehaviour
     public Transform dedSwann;
 
 
-    void Start()
+    void Update()
     {
         dedSwann.position = Swann.position;
     }
