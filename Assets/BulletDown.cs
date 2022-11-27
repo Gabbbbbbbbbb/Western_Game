@@ -25,6 +25,23 @@ public class BulletDown : MonoBehaviour
         }
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
+
+
+
+        ZswitchBlood switchblood = hitInfo.GetComponent<ZswitchBlood>();
+        if (switchblood != null)
+        {
+            switchblood.TakeDamage(damage);
+        }
+        Debug.Log(hitInfo.name);
+
+
+        ZSwitchSwann switchswann = hitInfo.GetComponent<ZSwitchSwann>();
+        if (switchswann != null)
+        {
+            switchswann.TakeDamage(damage);
+        }
+        Debug.Log(hitInfo.name);
     }
 
     void Update()
