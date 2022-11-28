@@ -11,7 +11,8 @@ public class Teleport : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player") == true)
         {
-            Player.position = arrivee.position;
+            //Player.position = arrivee.position;
+            Player.position = new Vector2(arrivee.position.x, arrivee.position.y);
         }
     }
 }
