@@ -60,10 +60,14 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }*/
 
-        /*if (DialogueManagerr.isActive == true)
+        if (DialogueManagerr.isActive == true)
         {
-            Time.timeScale = 0;
-        }*/
+            moveSpeed = 0;
+        }
+        if (DialogueManagerr.isActive == false)
+        {
+            moveSpeed = 8;
+        }
 
 
         movement.x = Input.GetAxisRaw("Horizontal");
