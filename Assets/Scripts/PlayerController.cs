@@ -60,11 +60,11 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }*/
 
-        if (DialogueManagerr.isActive == true)
+        if (DialogueManagerr.isActive == true/* || DialogueHenryOne.isActive == true || DialogueManageHenryOne.isActive == true || ENDmanage.isActive == true || ManageBarmanG.isActive == true || ManageHenryGates.isActive == true || ManageSwann.isActive == true || ManageTrainA.isActive == true*/)
         {
             moveSpeed = 0;
         }
-        if (DialogueManagerr.isActive == false)
+        if (DialogueManagerr.isActive == false/* || DialogueHenryOne.isActive == false || DialogueManageHenryOne.isActive == false || ENDmanage.isActive == false || ManageBarmanG.isActive == false || ManageHenryGates.isActive == false || ManageSwann.isActive == false || ManageTrainA.isActive == false*/)
         {
             moveSpeed = 8;
         }

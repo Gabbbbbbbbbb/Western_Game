@@ -46,6 +46,6 @@ public class BulletDown : MonoBehaviour
 
     void Update()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 1);
     }
 }

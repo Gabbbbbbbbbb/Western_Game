@@ -16,6 +16,7 @@ public class NPCTrainA : MonoBehaviour
     public GameObject Carriage; //Spawn de l'intéraction sur R4.
 
     public GameObject bandits; //Bandits à supprimer sur R4.
+    public GameObject ChariotBlock;
 
 
     private bool canDestroy = true;
@@ -39,6 +40,7 @@ public class NPCTrainA : MonoBehaviour
             Carriage.SetActive(true);
             Destroy(Npc);
             Destroy(bandits);
+            Destroy(ChariotBlock);
 
             canDestroy = false;
         }
