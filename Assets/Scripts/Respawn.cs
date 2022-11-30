@@ -44,7 +44,7 @@ public class Respawn : MonoBehaviour
             NoHealth = true;
         }
 
-        if (checkingin = true && Player.health <= 0)
+        if (checkingin == true && Player.health <= 0)
         {
             NoHealth = true;
             PlayerCharacter.position = new Vector2 (RespawnPoint.position.x, RespawnPoint.position.y);
