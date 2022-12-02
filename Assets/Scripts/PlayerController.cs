@@ -60,15 +60,47 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }*/
 
-        if (DialogueManagerr.isActive == true/* || DialogueHenryOne.isActive == true || DialogueManageHenryOne.isActive == true || ENDmanage.isActive == true || ManageBarmanG.isActive == true || ManageHenryGates.isActive == true || ManageSwann.isActive == true || ManageTrainA.isActive == true*/)
+        if (DialogueManagerr.isActive == true)
         {
             moveSpeed = 0;
         }
-        if (DialogueManagerr.isActive == false/* || DialogueHenryOne.isActive == false || DialogueManageHenryOne.isActive == false || ENDmanage.isActive == false || ManageBarmanG.isActive == false || ManageHenryGates.isActive == false || ManageSwann.isActive == false || ManageTrainA.isActive == false*/)
+        if (DialogueManagerr.isActive == false)
         {
             moveSpeed = 8;
         }
+        
+        if(DialogueManageHenryOne.isActive == true)
+        {
+            moveSpeed = 0;
+        }
 
+        if (ENDmanage.isActive == true)
+        {
+            moveSpeed = 0;
+        }
+
+        if (ManageBarmanG.isActive == true)
+        {
+            moveSpeed = 0;
+        }
+
+        if (ManageHenryGates.isActive == true)
+        {
+            moveSpeed = 0;
+        }
+
+        if (ManageSwann.isActive == true)
+        {
+            moveSpeed = 0;
+        }
+
+        if (ManageTrainA.isActive == true)
+        {
+            moveSpeed = 0;
+        }
+
+
+        //|| DialogueHenryOne.isActive == true ||
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
